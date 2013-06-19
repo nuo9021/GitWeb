@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+var p1={a1:"a2"};
+var p2=function(){
+	return false;
+};
+var p3=function(){
+	return true;
+};
+
+window.onload=function(){
+	// alert(parseInt(true));//NaN
+	// alert(parseInt(false));//NaN
+
+	// alert(parseInt(""));//NaN
+	// alert(parseInt("1"));//1
+	// alert(parseInt("012"));//12，ECMAScript5不支持字符串表示的八进制
+	// alert(parseInt("0x12"));//18
+	// alert(parseInt("0.12"));//0，小数点后不解析
+	// alert(parseInt("-12"));//-12
+	// alert(parseInt("abc123"));//NaN
+	// alert(parseInt("123abc"));//123
+
+	alert(parseInt(0));//0
+	alert(parseInt(12));//12
+	alert(parseInt(012));//10
+	alert(parseInt(0x12));//18
+	alert(parseInt(1.12));//1，不解析小数点后面的数值
+	
+	// alert(parseInt(null));//NaN
+	// alert(parseInt(undefined));//NaN
+	// alert(parseInt(NaN));//NaN
+	
+	// alert(parseInt(p1));//NaN
+	// alert(parseInt(p2));//NaN
+	// alert(parseInt(p3));//NaN
+
+	//第二个参数指定进制
+	// alert(parseInt("012","8"));//10
+	// alert(parseInt("0x12","16"));//18
+	// alert(parseInt("0111","2"))//7
+	// alert(parseInt("0122","2"))//1，不符合规则的返回1
+
+};
+
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+/*
+	1.NaN与任何值运算都返回NaN
+	2.NaN与任何值都不等，包括NaN本身
+	3.isNaN()函数会试图将参数转换成数值类型，若失败，则返回true
+*/
+var p1=0/0;
+var p2=NaN;
+var p3=NaN + 1;
+
+window.onload=function(){
+	alert(p1);//NaN
+	alert(p2);//NaN
+	alert(p3);//NaN
+	alert(1/0);//Infinity
+	alert(-1/0);//-Infinity
+
+	alert(p1 == p2);//false
+	
+	alert(isNaN(NaN));//true
+	alert(isNaN(false));//false
+	alert(isNaN(""));//false
+	alert(isNaN("hello"));//true
+	alert(isNaN(12));//false
+	alert(isNaN(0));//false
+	
+	
+};
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+var d1 = new Date();
+
+var d2 = new Date(Date.parse("2013,1,1"));
+var d3 = new Date("2013,1,1");
+
+var d4 = new Date(Date.UTC(2000,0));
+var d5 = new Date(2000,0);
+
+window.onload=function(){
+	alert(d1);
+	alert(d2);
+	alert(d3);
+	alert(d4);
+	alert(d5);
+
+	alert(Date.now());
+};
+
+</script>
+</body>
+</html>

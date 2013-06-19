@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+function outer(){
+	inner();
+}
+
+function inner(){
+	alert(arguments.callee.caller);
+}
+window.onload=function(){
+	outer();
+};
+
+</script>
+</body>
+</html>

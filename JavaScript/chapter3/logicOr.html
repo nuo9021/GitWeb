@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+
+var p1;
+var p2=null;
+var p3=NaN;
+var p4=12;
+var p5=0;
+var p6=-12;
+var p7=1.12;
+var p8=Infinity;
+var p9=true;
+var p10=false;
+var p11="hello";
+var p12="";
+var p13={a1:"a1"};
+var p14=function(){
+	alert("function");
+}
+
+window.onload=function(){
+	// alert(p1 || p14);//返回第二个操作数
+	// alert(p2 || p14);//同上
+	// alert(p3 || p14);//同上
+	alert(p14 || p1);//返回第一个操作数
+	alert(p14 || p2);//同上
+	alert(p14 || p3);//同上
+
+	alert(p1 || p1);//undefined
+	alert(p2 || p2);//null
+	alert(p3 || p3);//NaN
+	alert(p1 || p2);//返回第二个操作数
+
+	alert(p4 || -13);//返回第一个操作数
+	alert(p8 || -13);//同上
+	alert(p9 || p14);//返回true，短路
+	alert(p10 || p14);//返回第二个操作数
+	alert(p11 || p14);//返回第一个操作数
+	alert(p13 || p14);//返回第一个操作数
+
+	alert(p14 || p4);//同上
+	alert(p14 || p8);//同上
+	alert(p14 || p9);//同上
+	alert(p14 || p10);//同上
+	alert(p14 || p11);//同上
+	alert(p14 || p13);//同上
+
+	
+};
+
+</script>
+</body>
+</html>

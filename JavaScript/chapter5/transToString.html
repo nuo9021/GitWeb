@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+var person1 = {
+	toString:function(){
+		return "person1 toString";
+	},
+	toLocaleString:function(){
+		return "person1 toLocaleString";
+	},
+	valueOf:function(){
+		return "person1 valueOf";
+	}
+};
+
+var person2 = {
+	toString:function(){
+		return "person2 toString";
+	},
+	toLocaleString:function(){
+		return "person2 toLocaleString";
+	},
+	valueOf:function(){
+		return "person2 valueOf";
+	}
+};
+
+var a1 = [person1,person2];
+
+window.onload=function(){
+	alert(a1);//隐式调用了每个元素的toString()
+	alert(a1.toString());
+	alert(a1.valueOf());//重写无效，与toString相同
+	alert(a1.toLocaleString());//调用重写的toLocaleString()
+	alert(a1.join("!abcd!"));
+};
+
+</script>
+</body>
+</html>

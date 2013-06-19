@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+/*
+	1.typeof用于检测变量的数据类型，6个返回值:undefined,boolean,string,number,object,function
+	2.声明了变量但是没有初始化，则该变量的数据类型为Undefined，值为undefined
+*/
+var p1;
+var p2=false;
+var p3="hello";
+var p4=12;
+var p5={a1:"a1"};
+var p6=function(){
+	alert("function");
+}
+
+window.onload=function(){
+	alert(typeof p1);
+	alert(typeof p2);
+	alert(typeof p3);
+	alert(typeof p4);
+	alert(typeof p5);
+	alert(typeof p6);
+}
+
+</script>
+</body>
+</html>

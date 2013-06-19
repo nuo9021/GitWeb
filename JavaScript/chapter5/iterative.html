@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+var a1 = [1,3,4,2,1,23,2,122,12];
+
+window.onload=function(){
+	//返回布尔值
+	var r1 = a1.every(function(item,index,array){
+		return item > -2;
+	});
+	alert(r1);
+
+	//返回布尔值
+	var r2 = a1.some(function(item,index,array){
+		return item > 122;
+	});
+	alert(r2);
+
+	//返回符合过滤函数的元素组成的数组
+	var r3 = a1.filter(function(item,index,array){
+		return item > 22;
+	});
+	alert(r3);
+
+	//遍历每一项，执行函数
+	a1.forEach(function(item,index,array){
+		if(item > 22){
+			alert(item);
+		}
+	});
+
+	var a4 = a1.map(function(item,index,array){
+		return item*2;
+	});
+	alert(a4);
+};
+
+</script>
+</body>
+</html>

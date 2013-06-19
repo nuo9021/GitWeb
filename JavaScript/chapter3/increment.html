@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+
+var p1="2";
+var p2="z";
+var p3=false;
+var p4=1.1;
+var p5={
+	valueOf:function(){
+		return -1;
+	}
+};
+var p6=null;
+var p7=NaN;
+var p8;
+var p9=function(){
+	return -1;
+};
+
+window.onload=function(){
+	alert(++p1);//3
+	alert(++p2);//NaN
+	alert(++p3);//1
+	alert(--p4);//0.100000000000000009
+	alert(--p5);//-2
+	alert(--p6);//-1
+	alert(--p7);//NaN
+	alert(--p8);//NaN
+	alert(--p9);//NaN
+};
+
+</script>
+</body>
+</html>

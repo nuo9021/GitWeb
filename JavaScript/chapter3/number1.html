@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+/*
+	1.八进制以0开头；十六进制以0x开头，大小写无所谓；超出范围的数字被视作十进制
+	2.运算时转换成十进制
+*/
+
+var p1=12;
+var p2=012;
+var p3=018;
+var p4=0x12;
+var p5=0x1f;
+
+window.onload = function(){
+	alert(p1);//12
+	alert(p2);//10
+	alert(p3);//18
+	alert(p4);//18
+	alert(p5);//31
+	alert(p2+p4);//28
+};
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+/*
+	1.ECMAScript的最大值最小值如下表示
+	2.疑问：最小值减去最大值竟然是负的最大值。可能与IEEE754的规则有关
+	3.ifFinite()函数判断变量值是否超出最大最小值。疑问：Infinity竟然没超出？
+*/
+
+var p1=Number.MIN_VALUE;
+var p2=Number.MAX_VALUE;
+
+window.onload=function(){
+	alert(p1);//浏览器支持的最小值
+	alert(p2);//浏览器支持的最大值
+	alert(p1-1);//-1
+	alert(p2+1);//浏览器支持的最大值
+	alert(p1-p2);//负的浏览器支持的最大值
+	alert(p2+p2);//Infinity
+
+	alert(1/0);//Infinity
+	alert(-1/0);//-Infinity
+	
+	alert(isFinite(p1));//true
+	alert(isFinite(p2));//true
+	alert(isFinite(Infinity));//false
+	alert(isFinite(Infinity+1));//false
+	var p3=p2+p2;
+	alert(isFinite(p3));//false
+};
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+</body>
+<script>
+function factory(name,age){
+	var o = new Object();
+	o.name = name;
+	o.age = age;
+	o.sayName = function(){
+		alert(this.name);
+	};
+	return o;
+}
+
+var o1 = factory("li",23);
+var o2 = factory("wang",24);
+o1.sayName();
+o2.sayName();
+
+
+</script>
+</html>

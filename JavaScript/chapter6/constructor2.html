@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+</body>
+<script>
+function factory(name,age){
+	this.name = name;
+	this.age = age;
+	this.sayName = sayName;
+}
+
+function sayName(){
+		alert(this.name);
+};
+
+var o1 = new factory("li",23);
+var o2 = new factory("wang",24);
+o1.sayName();
+o2.sayName();
+alert(o1.sayName == o2.sayName);
+
+</script>
+</html>

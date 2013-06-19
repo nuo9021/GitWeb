@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+var re = null,
+	i;
+
+window.onload=function(){
+	for(i=0;i<10;i++){
+		re = /cat/g;
+		alert("lastIndex: " + re.lastIndex);
+		alert("for1:" + re.test("catastrophe"));
+	}
+	for(i=0;i<10;i++){
+		re = new RegExp("cat","g");
+		alert("for2:" + re.test("catastrophe"));
+	}
+};
+
+</script>
+</body>
+</html>

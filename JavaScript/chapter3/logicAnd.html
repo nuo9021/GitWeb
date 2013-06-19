@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+
+var p1;
+var p2=null;
+var p3=NaN;
+var p4=12;
+var p5=0;
+var p6=-12;
+var p7=1.12;
+var p8=Infinity;
+var p9=true;
+var p10=false;
+var p11="hello";
+var p12="";
+var p13={a1:"a1"};
+var p14=function(){
+	alert("function");
+}
+
+window.onload=function(){
+	// alert(p1 && p14);//有undefined返回undefined
+	// alert(p2 && p14);//null,同上
+	// alert(p3 && p14);//NaN，同上
+	// alert(p1 && p2);//谁在前，返回谁
+
+	// alert(p4 && -13);//返回第二个操作数
+	// alert(p8 && -13);//同上
+	// alert(p9 && p14);//同上
+	// alert(p10 && p14);//返回false,涉及有对象且没有3个特殊值的操作时，只此一个例外
+	// alert(p11 && p14);//同上
+	// alert(p13 && p14);//同上
+
+	alert(p14 && p4);//同上
+	alert(p14 && p8);//同上
+	alert(p14 && p9);//同上
+	alert(p14 && p10);//同上
+	alert(p14 && p11);//同上
+	alert(p14 && p13);//同上
+
+	
+};
+
+</script>
+</body>
+</html>

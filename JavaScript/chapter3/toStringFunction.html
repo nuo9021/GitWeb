@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+/*
+	1.Boolean函数用于把任何类型的变量转型为Boolean类型，具体返回值可参见笔记或执行此示例
+	2.讲某个类型的值作为条件时，其实是使用Boolean()将其转型了
+*/
+
+var p1;
+var p2=false;
+var p3=12;
+var p4=0x12;
+var p5=012;
+var p6=0;
+var p7={a1:"a1"};
+var p8=function(){
+	alert("function");
+};
+var p9=null;
+var p10=NaN;
+
+window.onload=function(){
+	// alert(p1.toString());//undefined没有这个方法，这句报错
+	alert(p2.toString());//false
+	alert(p3.toString());//12
+	alert(p4.toString());//18
+	alert(p5.toString());//10
+	alert(p6.toString());//0
+	alert(p7.toString());//[object Objcet]
+	alert(p8.toString());//返回function的整个定义
+	// alert(p9.toString());//null没有这个方法，这句报错
+	alert(p10.toString());//NaN
+
+	//将数值转换成对应进制的字符串
+	var num=10;
+	alert("10".toString());//10
+	alert(num.toString(2));//1010
+	alert(num.toString(8));//12
+	alert(num.toString(10));//10
+	alert(num.toString(16));//a
+};
+
+
+
+
+</script>
+</body>
+</html>

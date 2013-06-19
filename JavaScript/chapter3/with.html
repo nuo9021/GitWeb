@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+
+window.onload=function(){
+	var origin = "hello";
+	with(location){
+		alert(protocol);
+		alert(origin);
+		alert(href);
+		var origin = "hello";
+		alert(origin);//依旧是file://
+	}
+};
+
+</script>
+</body>
+</html>

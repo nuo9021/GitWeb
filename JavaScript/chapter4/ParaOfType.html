@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+var p1 = new Object();
+p1.name = "a1";
+function set(para){
+	para.name += " changed";
+	return para.name;
+}
+
+
+var p2 = 10;
+function add(num){
+	num += 10;
+	return num;
+}
+
+window.onload=function(){
+	alert(add(p2));
+	alert("p2:" + p2);//还是10	
+
+	alert(set(p1));
+	alert(p1.name);//改变成"a1 changed"
+};
+
+</script>
+</body>
+</html>

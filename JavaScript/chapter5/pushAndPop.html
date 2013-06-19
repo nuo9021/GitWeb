@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+var a1 = ["yellow","blue"];
+var person1 = {
+	toString:function(){
+		return "person1 toString";
+	},
+	toLocaleString:function(){
+		return "person1 toLocaleString";
+	},
+	valueOf:function(){
+		return "person1 valueOf";
+	}
+};
+window.onload=function(){
+	a1.push(person1);
+	alert(a1[2]);
+	a1.pop();
+	a1.pop();
+	alert(a1[2]);
+	alert(a1[1]);	
+};
+
+</script>
+</body>
+</html>

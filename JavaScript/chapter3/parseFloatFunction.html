@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+var p1={a1:"a2"};
+var p2=function(){
+	return false;
+};
+var p3=function(){
+	return true;
+};
+
+window.onload=function(){
+	// alert(parseFloat(true));//NaN
+	// alert(parseFloat(false));//NaN
+
+	// alert(parseFloat(""));//NaN
+	// alert(parseFloat("1"));//1
+	// alert(parseFloat("012"));//12，ECMAScript5不支持字符串表示的八进制
+	// alert(parseFloat("0x12"));//0，十六进制格式转换成0
+	// alert(parseFloat("0.12"));//0.12
+	// alert(parseFloat("-12"));//-12
+	// alert(parseFloat("abc123"));//NaN
+	// alert(parseFloat("123abc"));//123
+
+	alert(parseFloat(0));//0
+	alert(parseFloat(12));//12
+	alert(parseFloat(012));//10
+	alert(parseFloat(0x12));//18
+	alert(parseFloat(0.12));//18
+	
+	// alert(parseFloat(null));//NaN
+	// alert(parseFloat(undefined));//NaN
+	// alert(parseFloat(NaN));//NaN
+	
+	// alert(parseFloat(p1));//NaN
+	// alert(parseFloat(p2));//NaN
+	// alert(parseFloat(p3));//NaN
+
+
+};
+
+</script>
+</body>
+</html>

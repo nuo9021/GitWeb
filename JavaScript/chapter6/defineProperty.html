@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+</body>
+<script>
+
+var person = {};
+
+Object.defineProperty(person,"name",{
+	writeable:false,
+	value:"li"
+});
+
+alert(person.name);
+
+person.name = "wang";
+
+alert(person.name);
+
+delete person.name;
+
+alert(person.name);
+
+var book = {
+	_year:2004,
+	edition:1
+};
+
+Object.defineProperty(book,"year",{
+	get:function(){
+		return this._year;
+	},
+	set:function(value){
+		this._year = value;
+		this.edition++;
+	}
+});
+
+alert(book.year);
+book.year = 2018;
+alert(book._year + ":" + book.edition);
+
+
+</script>
+</html>

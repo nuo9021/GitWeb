@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+var a1 = [1,12,22,5,44];
+
+function compare(v1,v2){
+	if(v1 < v2){
+		return -1;
+	}
+	else if(v1 > v2){
+		return 1;
+	}
+	else{
+		return 0;//0必须放到最后才能保证排序不会出错
+	}
+}
+
+//如果只有数组元素只有数值的话，可以用这种简单比较方式
+function compare2(v1,v2){
+	return v2-v1;
+}
+
+window.onload=function(){
+	// alert(a1.reverse());//44,5,22,12,1
+	// alert(a1);//结果相同
+	// alert(a1.sort());//由于是根据数组每个元素的toString()后的结果进行比较，所以返回1,12,22,44,5
+	// alert(a1);//与上同	
+	alert(a1.sort(compare2));	
+};
+
+</script>
+</body>
+</html>

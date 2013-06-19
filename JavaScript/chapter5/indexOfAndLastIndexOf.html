@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+var a1 = [22,3,4,1,2,3,213,22,21];
+
+var person = {
+	name:"li"
+};
+
+var people = [person];
+var people2 = [{name:"li"}];
+
+window.onload=function(){
+	alert(a1.indexOf(22));
+	alert(a1.lastIndexOf(22));
+
+	alert(people.indexOf(person));
+	alert(people2.indexOf(person));//返回-1
+};
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+/*
+	1.typeof操作符没有单独为Null数据类型设置一个返回值，它的返回值是object
+	2.null == undefined,但是null !== undefined。也就是说二者值相等，类型不同。
+*/
+
+var p1 = null;
+
+window.onload = function(){
+	alert(p1);//null
+	alert(typeof p1);//object
+	alert(p1 == undefined);//true
+	alert(p1 === undefined);//false
+	alert(p1 === null);//true
+};
+
+
+</script>
+</body>
+</html>

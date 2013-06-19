@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+
+window.onload=function(){
+	// a();
+	// a(1);
+	// a(1,2);
+	b("hello");
+};
+
+function a(){
+	var i = 0;
+	while(i<arguments.length){
+		alert(arguments[i]);
+		i++;
+	}
+	alert(arguments[10]);//undefined
+}
+
+function b(p1){
+	alert(p1 == arguments[0]);//true
+	alert(p1 === arguments[0]);//true
+	arguments[0] = 12;
+	alert(p1);//12
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+
+window.onload=function(){
+	onlyBreak();
+	breakWithLabel();
+	onlyContinue();
+	continueWithLabel();
+};
+
+function onlyBreak(){
+	var num = 0;
+	for(var i=0;i<5;i++){
+		for(var j=0;j<5;j++){
+			if(i == 3 && j == 3){
+				break;//此处跳出内层for余下的循环，即i=3时的j=3和j=4，所以结果是25次循环少了2次
+			}
+			num++;
+		}
+	}
+	alert(num);//23
+}
+
+function breakWithLabel(){
+	var num = 0;
+	outFor:
+	for(var i=0;i<5;i++){
+		for(var j=0;j<5;j++){
+			if(i == 3 && j == 3){
+				break outFor;//此处是跳出本次的外层for循环，即直接进行i=4的操作
+			}
+			num++;
+		}
+	}
+	alert(num);//18
+}
+
+function onlyContinue(){
+	var num = 0;
+	for(var i=0;i<5;i++){
+		for(var j=0;j<5;j++){
+			if(i == 3 && j == 3){
+				continue;
+			}
+			num++;
+		}
+	}
+	alert(num);//24
+}
+
+function continueWithLabel(){
+	var num = 0;
+	outFor:
+	for(var i=0;i<5;i++){
+		for(var j=0;j<5;j++){
+			if(i == 3 && j == 3){
+				continue outFor;
+			}
+			num++;//23
+		}
+	}
+	alert(num);//18
+}
+</script>
+</body>
+</html>

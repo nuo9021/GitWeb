@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+function getRandom(min,max){
+	var between = max - min;
+	var index = Math.random() * between + min;
+	return Math.ceil(index);
+}
+var a = ["a","b","c","d","e"];
+alert(a[getRandom(0, a.length-1)]);
+</script>
+</body>
+</html>

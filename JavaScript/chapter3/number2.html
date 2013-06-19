@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+/*
+	1.小数点后6个0以上的浮点数采用科学计数法表示
+	2.浮点数的最高精度为17位，计算精确度不如整数
+*/
+
+var p1=3.12;
+var p2=3.12e7;
+var p3=0.000007;
+var p4=0.0000007;
+var p5=1.0000001e3;
+var p6=7e-7;
+
+window.onload=function(){
+	alert(p1);//3.12
+	alert(p2);//31200000
+	alert(p3);//0.000007
+	alert(p4);//7e-7
+	alert(p5);//1000.0001;
+	alert(p6);//7e-7
+	alert(0.1+0.2);//0.3(这里15个0)4
+};
+
+
+</script>
+</body>
+</html>

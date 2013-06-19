@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+var s = "cat,bat,dat,eat";
+alert(s.replace("at","AT"));
+
+alert(s.replace(/at/g,"AT"));
+
+alert(s.replace(/(.at)/g,"AT ($1)"));
+
+function escape(s){
+	return s.replace(/[<>"&]/g,function(match,pos,originalText){
+		switch(match){
+			case "<":
+				return "a";
+			case ">":
+				return "b";
+			case "\"":
+				return "c";
+			case "&":
+				return "d";
+		}
+	});
+}
+alert(escape("<img src=\"http://baidu.com&name='abc'\" >"));
+
+</script>
+</body>
+</html>

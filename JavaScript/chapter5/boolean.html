@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+var booleanObj = new Boolean(false);
+var result = booleanObj && true;
+alert(result);//true
+
+var booleanVal = false;
+result = booleanVal && true;
+alert(result);//false
+
+alert(typeof booleanObj);//Object
+alert(typeof booleanVal);//boolean
+alert(booleanObj instanceof Boolean);//true
+alert(booleanVal instanceof Boolean);//false
+
+
+window.onload=function(){
+	
+};
+
+</script>
+</body>
+</html>

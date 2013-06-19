@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+/*p1与p2的值和类型都相同*/
+
+var p1;
+var p2=undefined;
+// var p3;
+
+window.onload=function(){
+	alert(typeof p1);//undefined
+	alert(p1);//undefined
+	alert(undefined === p1);//true
+
+	alert(typeof p2);//undefined
+	alert(p2);//undefined
+	alert(undefined === p2);/true
+
+	alert(p1 === p2);//true
+
+	alert(typeof p3);//返回undefined
+	// alert(p3); 报错
+	// alert(undefined === p3); 报错
+};
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+
+var o1 = new Object();
+o1.name="value";
+var o2 = new Object;
+o2.name="value";
+var o3={name:"value"};
+
+window.onload=function(){
+	alert(o1.constructor);//function object(){[native code]}
+	alert(o1.prototype);//undefined
+	alert(o1.toLocaleString());//[object Object]
+	alert(o1.toString());//[object Object]
+	alert(o1.valueOf());//[object Object]
+	alert(o1.hasOwnProperty("name"));//true
+	alert(o1.isPrototypeOf(o1));//false
+	alert(o1.propertyIsEnumerable("name"));//true
+};
+
+</script>
+</body>
+</html>

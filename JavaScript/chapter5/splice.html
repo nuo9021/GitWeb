@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+var a1 = ["red","blue","yellow","brown","green"];
+
+window.onload=function(){
+	//参数一：要删除的第一项的位置；参数二：要删除的项数
+	var r1 = a1.splice(2,1);
+	alert(a1);
+	alert(r1);//删除了的元素
+
+	//参数一：要增加的项数位置；参数二：0；参数三以后：增加的项
+	var r2 = a1.splice(3,0,"new color","new color2");
+	alert(a1);
+	alert(r2);//空字符串
+
+	//参数一：起始位置；参数二：要删除的项；参数三以后：要增加的项
+	var r3 = a1.splice(3,2,"replace1","replace2","add");
+	alert(a1);
+	alert(r3);//删除了的元素
+};
+
+</script>
+</body>
+</html>

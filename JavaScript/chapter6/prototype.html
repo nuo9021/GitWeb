@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+</body>
+<script>
+function Person(name,age){
+	Person.prototype.name = name;
+	Person.prototype.age = age;
+	Person.prototype.sayName = function(){
+		alert(this.name);
+	};
+}
+
+var o1 = new Person("li",23);
+var o2 = new Person("wang",24);
+o1.sayName();//wang
+o2.sayName();
+alert(o1.sayName == o2.sayName);
+
+</script>
+</html>

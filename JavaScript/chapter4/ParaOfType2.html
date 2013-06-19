@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+var p1 = new Object();
+p1.name = "p1.name";
+function set(para){
+	para.name += " p1.name";
+	para = new Object();
+	para.name += "p2.name";
+}
+
+window.onload=function(){
+	set(p1);
+	alert(p1.name);//输出"p1.name p1.name"
+};
+
+</script>
+</body>
+</html>

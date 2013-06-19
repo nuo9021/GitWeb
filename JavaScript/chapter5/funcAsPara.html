@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+function callFunc(func,argu){
+	return func(argu);
+}
+
+function add(num){
+	return num + 10;
+}
+
+function greet(name){
+	return "Hello," + name;
+}
+window.onload=function(){
+	alert(callFunc(add,10));
+	alert(callFunc(greet,"li"));
+};
+
+</script>
+</body>
+</html>

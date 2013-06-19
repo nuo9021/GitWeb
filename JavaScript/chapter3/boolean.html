@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+/*
+	1.Boolean函数用于把任何类型的变量转型为Boolean类型，具体返回值可参见笔记或执行此示例
+	2.讲某个类型的值作为条件时，其实是使用Boolean()将其转型了
+*/
+
+var p1;
+var p2=false;
+var p3="hello";
+var p4="";
+var p5=12;
+var p6=0;
+var p7={a1:"a1"};
+var p8=function(){
+	alert("function");
+};
+var p9=null;
+var p10=NaN;
+
+window.onload=function(){
+	// alert(Boolean(p1));//false
+	// alert(Boolean(p2));//false
+	// alert(Boolean(p3));//true
+	// alert(Boolean(p4));//false
+	// alert(Boolean(p5));//true
+	// alert(Boolean(p6));//false
+	// alert(Boolean(p7));//true
+	// alert(Boolean(p8));//true
+	// alert(Boolean(p9));//false
+	// alert(Boolean(p10));//false
+
+	if(p1){
+		alert("p1作为if条件返回true");
+	}
+	if(p2){
+		alert("p2作为if条件返回true");
+	}
+	if(p3){
+		alert("p3作为if条件返回true");
+	}
+	if(p4){
+		alert("p4作为if条件返回true");
+	}
+	if(p5){
+		alert("p5作为if条件返回true");
+	}
+	if(p6){
+		alert("p6作为if条件返回true");
+	}
+	if(p7){
+		alert("p7作为if条件返回true");
+	}
+	if(p8){
+		alert("p8作为if条件返回true");
+	}
+	if(p9){
+		alert("p9作为if条件返回true");
+	}
+	if(p10){
+		alert("p10作为if条件返回true");
+	}
+};
+
+
+
+
+</script>
+</body>
+</html>

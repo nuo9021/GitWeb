@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+var p1 = ["blue","yello"];
+
+window.onload=function(){
+	var outItem = p1.shift();//将blue推出
+	alert(p1[0]);
+	alert(outItem);//输出"blue"
+	var arrayLength = p1.unshift(123,"red");
+	alert(p1[0]);
+	alert(arrayLength);
+};
+
+</script>
+</body>
+</html>

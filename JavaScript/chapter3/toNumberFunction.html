@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+var p1={a1:"a2"};
+var p2=function(){
+	return false;
+};
+var p3=function(){
+	return true;
+};
+
+window.onload=function(){
+	alert(Number(true));//1
+	alert(Number(false));//0
+
+	alert(Number(""));//0
+	alert(Number("1"));//1
+	alert(Number("012"));//12，不支持八进制
+	alert(Number("0x12"));//18
+	alert(Number("0.12"));//0.12
+	alert(Number("-12"));//-12
+	alert(Number("abc123"));//NaN
+	
+	alert(Number(0));//0
+	alert(Number(12));//12
+	
+	alert(Number(null));//0
+	alert(Number(undefined));//NaN
+	alert(Number(NaN));//NaN
+	
+	alert(Number(p1));//NaN
+	alert(Number(p2));//NaN
+	alert(Number(p3));//NaN
+};
+
+</script>
+</body>
+</html>

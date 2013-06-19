@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+</body>
+<script>
+
+var person = {};
+
+Object.defineProperties(person,{
+	name:{
+		value:"li"
+	},
+	age:{
+		value:23,
+		configurable:true,
+		writable:true
+	},
+	year:{
+		get:function(){
+			return this.age
+		}
+	},
+	years:{
+		set:function(value){
+			this.age = value;
+		}
+	}
+});
+
+alert(person.name);
+alert(person.age);
+alert(person.year);
+person.years = 24;
+alert(person.age);
+
+var descriptor = Object.getOwnPropertyDescriptor(person,"age");
+alert(descriptor.value);
+alert(descriptor.writable);
+
+</script>
+</html>

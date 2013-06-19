@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+<script type="text/javascript">
+function factorial(num){
+	if(num <= 1){
+		return 1;
+	}
+	else{
+		return num * arguments.callee(num-1);
+	}
+}
+window.onload=function(){
+	var another = factorial;
+	factorial = function(){
+		return 0;
+	}
+	alert(another(3));//与函数名解耦后，仍是6
+	alert(factorial(3));//0
+};
+
+</script>
+</body>
+</html>
